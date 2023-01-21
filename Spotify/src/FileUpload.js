@@ -23,7 +23,7 @@ function FileUpload() {
             getDownloadURL(uploadTask.snapshot.ref)
             .then(url => {
               const song={name, artist, url};
-              fetch("https://alexsherrowspotify.herokuapp.com//song/add",{
+              fetch("https://alexsherrowspotify.herokuapp.com/song/add",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(song)
